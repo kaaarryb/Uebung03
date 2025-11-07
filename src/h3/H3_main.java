@@ -7,18 +7,13 @@ public class H3_main {
 	 int wartend = 2;
 	 boolean istVoll = false;
 	 
-	 int freiePlaetze = max - fix;
-	 
-	 if (freiePlaetze > 0 && wartend > 0) {
-		 int zuVergeben = Math.min(wartend, freiePlaetze);
-		 fix += zuVergeben;
-		 wartend -= zuVergeben;
+	 for (; fix < max && wartend > 0; fix++, wartend --) {
+		 
 	 }
-	 
-	 if (fix >= max) {
-		 istVoll = true;
+	 if(fix == max) {
+		 istVoll= true;
 	 } else {
-		 istVoll = false;
+		 istVoll= false;
 	 }
 	 
 	 System.out.println("Fixplätze vergeben: " + fix);
